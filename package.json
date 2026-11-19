@@ -1,0 +1,30 @@
+{
+  "name": "jobfit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "JD × 简历匹配分析器：0-100 打分、五维拆解、逐条改法",
+  "author": "罗尉 (PetitroL) <petitro@sina.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n server,web -c green,cyan \"node server/index.js\" \"vite --config web/vite.config.js\"",
+    "build": "vite build --config web/vite.config.js",
+    "preview": "node server/index.js",
+    "start": "node server/index.js",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "concurrently": "^8.2.2",
+    "vite": "^5.2.0",
+    "vue": "^3.4.21"
+  }
+}

@@ -1,0 +1,8 @@
+node_modules/
+web/dist/
+dist/
+.env
+*.log
+.tmp-*
+__pycache__/
+.DS_Store
